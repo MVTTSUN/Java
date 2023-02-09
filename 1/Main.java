@@ -126,16 +126,16 @@ public class Main {
     int end = array.length - 1;
 
     for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array[i].length; j++) {
+      for (int j = 0; j < array[i].length; j++) {
         if (j == start || j == end) {
           array[i][j] = 1;
         }
-				System.out.print(array[i][j]);
-			}
-			System.out.println();
+        System.out.print(array[i][j]);
+      }
+      System.out.println();
       start++;
       end--;
-		}
+    }
   }
   
   // 4. Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
