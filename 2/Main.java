@@ -29,10 +29,17 @@ public class Main {
       if (i != 99) sb.append("\n");
     }
     Path test = Path.of("2", "test.txt");
+    if (Files.exists(test)) {
+      try {
+        Files.delete(test);
+      } catch (IOException e) {
+        System.out.println(e.getMessage());
+      }
+    }
     try {
       Files.createFile(test);
       Files.writeString(test, sb);
-    } catch(IOException e) {
+    } catch (IOException e) {
       System.out.println(e.getMessage());
     }
   }
